@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+
+    <title>Jokes API</title>
+
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+
+<body>   
+
+    <h1>Jokes According to Your Name</h1>
+    <label for="name">Enter your name below:</label>
+    <input type="text" id="name">
+    <button type="submit" onclick="getJoke()">Submit</button>
+
+    <div id="joke-container">
+        </div>
+
+    <div class="options">
+        <h2>Customize Your Joke</h2>
+        <label for="category">Category:</label>
+        <select id="category">
+            <option value="any">Any</option>
+            <option value="programming">Programming</option>
+            <option value="misc">Misc</option>   
+
+            <option value="dark">Dark</option>
+            <option value="pun">Pun</option>
+            <option value="spooky">Spooky</option>
+            <option value="christmas">Christmas</option>
+        </select>   
+
+
+        <label for="flags">Blacklist Flags:</label>
+        <div id="flags">
+            <input type="checkbox" name="nsfw" id="nsfw">
+            <label for="nsfw">NSFW</label>
+            <input type="checkbox" name="religious" id="religious">
+            <label for="religious">Religious</label>
+            <input type="checkbox" name="political" id="political">
+            <label for="political">Political</label>
+            <input type="checkbox" name="sexist" id="sexist">
+            <label for="sexist">Sexist</label>
+            <input type="checkbox" name="explicit" id="explicit">
+            <label for="explicit">Explicit</label>
+            <input type="checkbox" name="racist" id="racist">
+            <label for="racist">Racist</label>
+        </div>
+
+        <label for="type">Joke Type:</label>
+        <div id="type">
+            <input type="checkbox" name="single" id="single">
+            <label for="single">Single</label>
+            <input type="checkbox" name="two-part" id="two-part">
+            <label for="two-part">Two-Part</label>
+        </div>
+
+        <label for="search">Search String:</label>
+        <input type="text" id="search">
+    </div>
+</body>

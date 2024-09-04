@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jokes api</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+<h1>Jokes according to your name</h1>
+<form action="">
+    <label for="name">Enter your name below</label>
+    <input type="text" name="name" value=""  placeholder="Enter username">
+    <button type="submit" name="submit" formaction="/submit">submit</button>
+</form>
+<br>
+<br>
+
+<hr>
+<br>
+
+<div class="container">
+    <form action="/reload" method="post">
+
+ 
+    <div class="item-1">
+
+      <div class="category1">
+            <p>select category-</p>
+     
+            <div class="option1">
+       
+            <input type="radio" name="categoryselect" value="any" checked >
+            <label for="cat-radio1">any</label>
+
+            </div>
+
+             <div class="option2">
+               <input type="radio" name="categoryselect" value="multi" >
+               <label for="cat-radio2">custom:</label>
+        
+               <input type="checkbox"  name="cat" value="Programming" >
+               <label for="programming">Programming</label>
+
+               <input type="checkbox" name="cat" value="Miscellaneous" id="">
+               <label for="Misc">Misc</label>
+
+               <input type="checkbox" name="cat" value="Dark" id="">
+               <label for="Dark">Dark</label>
+
+              <input type="checkbox" name="cat" value="Pun">
+              <label for="pun">Pun</label>
+                
+              <input type="checkbox" name="cat" value="Spooky">
+              <label for="spooky">spooky</label>
+
+              <input type="checkbox" name="cat" value="Christmas">
+              <label for="christmas">christmas</label>
+             </div>
+      </div>
+<br>
+
+<div class="flags">
+    
+    <p> select flags to blacklist-</p>
+
+        <input type="checkbox" name="flag" value="nsfw">
+        <label for="flag">nsfw</label>
+        <input type="checkbox" name="flag" value="religious">
+        <label for="flag">religious</label>
+        <input type="checkbox" name="flag" value="political">
+        <label for="flag">political</label>
+        <input type="checkbox" name="flag" value="sexist">
+        <label for="flag">sexist</label>
+        <input type="checkbox" name="flag" value="explicit">
+        <label for="flag">explicit</label>
+        <input type="checkbox" name="flag" value="racist">
+        <label for="flag">racist</label>
+
+
+
+</div>
+<br>
+
+<div class="joke-type">
+    <p>select atleast one joke type</p>
+    <input type="checkbox" name="type" value="single">
+    <label for="type">single</label>
+    <input type="checkbox" name="type" value="twopart">
+    <label for="type">two part</label>
+ </div>
+<br>
+
+<div class="string">
+    <p>Search for a joke that
+    contains this search string:</p>
+    <input type="text" name="search" value="">
+ </div>
+ <br>
+ <button type="submit" class="submit" formaction="/submit">Submit</button>
+
+</div>
+</form>
+
+
+
+
+<div class="item-2" >
+
+    
+
+   <h2>RAW data</h2>
+     <% if(locals.content){%>
+        <div  class="item-3">
+        <p><%=content%></p>
+    </div>
+      <%}else{%>
+     <h2>your joke will be displayed here</h2>
+      <%}%> 
+ 
+    <br>
+    <br>
+
+    <div>
+        <h2>Yours Joke</h2>
+         
+     <% if(locals.joke){%>
+        <h3><%=joke%></h2>
+            <h3><%=delivery%></h3>
+      <%}else{%>
+     <h2>your joke will be displayed here</h2>
+      <%}%>
+
+    </div>
+     
+</div>
+
+</div>
+
+<body>
+    
+</body>
+</html>
