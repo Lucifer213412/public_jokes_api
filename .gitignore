@@ -1,0 +1,30 @@
+# OS generated files #
+.DS_Store
+Thumbs.db
+
+# Logs and temp files #
+*.log
+*.tmp
+*.bak
+
+# Dependency directories #
+node_modules/
+vendor/
+target/
+__pycache__/
+
+# Compiled files #
+*.out
+*.class
+*.o
+
+# IDEs and editors #
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Environment variables and config files #
+.env
+config.json
+
